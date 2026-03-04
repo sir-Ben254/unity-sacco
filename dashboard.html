@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity SACCO Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">💰 Unity SACCO</div>
+
+    <nav id="navMenu">
+        <button id="darkModeBtn"><i class="fas fa-moon"></i></button>
+        <button id="translateBtn">EN/SW</button>
+        <button id="logoutBtn">Logout</button>
+    </nav>
+
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</header>
+
+<!-- BODY CONTENT -->
+<div class="dashboard-container">
+
+<table id="saccoTable">
+<thead>
+<tr>
+<th>Ref No</th>
+<th>Name</th>
+<th>Previous Total</th>
+<th>1-31.1</th>
+<th>1-28.2</th>
+<th>Running Total</th>
+<th>Loan Balance</th>
+<th>Loan Payment Date</th>
+<th>Penalty</th>
+<th>Interest</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="5"><strong>Group Balance</strong></td>
+<td id="groupBalance"></td>
+<td colspan="5"></td>
+</tr>
+</tfoot>
+</table>
+
+<button id="downloadAll" class="primary-btn">Download Full Report</button>
+
+</div>
+
+<footer>
+    <div class="socials">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <p>© 2026 Unity SACCO</p>
+</footer>
+
+<!-- LOGOUT POPUP -->
+<div class="popup" id="logoutPopup">
+    <div class="popup-content">
+        <h3>Confirm Logout</h3>
+        <p>Are you sure you want to logout?</p>
+        <button id="confirmLogout" class="primary-btn">Yes Logout</button>
+        <button id="cancelLogout">Cancel</button>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

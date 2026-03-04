@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unity SACCO</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo" data-en="💰 Unity SACCO" data-sw="💰 Umoja SACCO">
+        💰 Unity SACCO
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home" data-en="Home" data-sw="Nyumbani">Home</a>
+        <a href="#about" data-en="About" data-sw="Kuhusu">About</a>
+        <a href="#impact" data-en="Impact" data-sw="Athari">Impact</a>
+        <a href="#community" data-en="Community" data-sw="Jamii">Community</a>
+    </nav>
+
+    <div class="header-controls">
+        <button id="darkModeBtn"><i class="fas fa-moon"></i></button>
+        <button id="translateBtn">EN/SW</button>
+        <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<section id="home">
+    <video autoplay muted loop playsinline id="bgVideo"
+        poster="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80">
+        <source src="https://cdn.coverr.co/videos/coverr-team-meeting-5176/1080p.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay">
+        <h1 id="typedText"></h1>
+        <button class="primary-btn ripple" id="openPopup"
+            data-en="Join Us Now"
+            data-sw="Jiunge Nasi Sasa">
+            Join Us Now
+        </button>
+    </div>
+</section>
+
+<section id="about">
+    <h2 data-en="About Us" data-sw="Kuhusu Sisi">About Us</h2>
+
+    <p data-en="We empower members financially."
+       data-sw="Tunawawezesha wanachama kifedha.">
+       We empower members financially.
+    </p>
+
+    <div class="founder-card">
+        <img 
+        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+        alt="Founder">
+
+        <h3 data-en="Chairperson" data-sw="Mwenyekiti">Chairperson</h3>
+        <p data-en='"Together we build a stronger financial future."'
+           data-sw='"Pamoja tunajenga mustakabali imara wa kifedha."'>
+           "Together we build a stronger financial future."
+        </p>
+    </div>
+</section>
+
+<section id="impact">
+    <h2 data-en="Our Impact" data-sw="Athari Zetu">Our Impact</h2>
+    <div class="impact-grid">
+        <div class="impact-card">10,000+ Members</div>
+        <div class="impact-card">Ksh 50M Loans Issued</div>
+        <div class="impact-card">98% Repayment Rate</div>
+    </div>
+</section>
+
+<section id="community">
+    <h2 data-en="Community" data-sw="Jamii">Community</h2>
+    <p data-en="We host financial literacy workshops and retreats."
+       data-sw="Tunafanya warsha za elimu ya kifedha na mikutano.">
+       We host financial literacy workshops and retreats.
+    </p>
+</section>
+
+<footer>
+    <div class="socials">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <p>© 2026 Unity SACCO</p>
+</footer>
+
+<!-- POPUP -->
+<div class="popup" id="authPopup">
+    <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+
+        <div class="tabs">
+            <button class="tab active">Login</button>
+            <button class="tab">Sign Up</button>
+        </div>
+
+        <form id="authForm">
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="primary-btn ripple">Continue</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
